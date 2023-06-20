@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col items-center mb-4">
+      <div className="flex flex-col md:items-center mb-4">
         <h3 className="font-semibold text-slate-700 mb-4">
           Keep Connect With Us
         </h3>
