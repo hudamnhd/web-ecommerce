@@ -1,6 +1,8 @@
 export const fetchData = async (setDataProduct) => {
   try {
-    const response = await fetch("https://fakestoreapi.com/products?limit=18");
+    const response = await fetch(
+      "https://raw.githubusercontent.com/hudamnhd/web-ecommerce/main/products.json"
+    );
     const data = await response.json();
     const processData = data.map((item) => ({
       ...item,
