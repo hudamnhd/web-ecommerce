@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
 import { Card, Modal, Loading } from "../components";
 import { fetchData, useFilterData } from "../utils";
+
 const Products = () => {
   const {
     dataProduct,

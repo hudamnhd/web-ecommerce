@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="flex flex-wrap justify-between">
         {[1, 2, 3].map((index) => (
           <div
-            className="flex flex-col justify-between items-start mb-4 xs:mb-0  xs:mx-8"
+            className="flex flex-col justify-between items-start mb-4 xs:mb-0 "
             key={index}
           >
             <h3 className="font-semibold text-slate-700">Product</h3>
