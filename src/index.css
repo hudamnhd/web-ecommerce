@@ -13,15 +13,15 @@ html {
 }
 
 body {
-  @apply bg-slate-50;
+  @apply bg-white;
 }
 
 .main_container {
-  @apply mt-16;
+  @apply mt-16 xl:max-w-[1280px] mx-auto w-full bg-slate-50;
 }
 
 nav {
-  @apply h-[65px] fixed px-5 xs:px-10 w-full top-0 z-10 backdrop-blur-xl bg-slate-50/90 border-b-2 drop-shadow-sm flex justify-between items-center space-x-5;
+  @apply h-[65px] fixed px-5 xs:px-10 w-full xl:max-w-[1280px] top-0 z-10 backdrop-blur-xl bg-slate-50/90 border-b-2 drop-shadow-sm flex justify-between items-center space-x-5;
 }
 
 .nav_mobile {
@@ -263,7 +263,7 @@ footer {
 }
 
 .box_cta {
-  @apply xs:w-[67%] items-center space-y-1;
+  @apply xs:w-[67%] space-y-1;
 }
 
 .box_cta input {

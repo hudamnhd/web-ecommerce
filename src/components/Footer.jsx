@@ -17,7 +17,7 @@ const Footer = () => {
           FK Store 2023 Develop By Huda
         </p>
       </div>
-      <div className="flex flex-wrap gap-14 my-3">
+      <div className="flex flex-wrap gap-14 my-3 mr-6">
         {[1, 2, 3].map((index) => (
           <div
             className="flex shrink-0 items-start flex-col justify-between space-y-3"

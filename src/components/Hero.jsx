@@ -7,7 +7,7 @@ const Hero = () => {
         <h1 className="flex-1 text-3xl md:text-4xl font-bold">
           Special <span className="text-sky-500">Discount </span>First Shopping
         </h1>
-        <p className="opacity-70">
+        <p className="md:max-w-[80%] opacity-70">
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat lorem ipsum dolor sit amet, qui
           minim labore.
