@@ -12,6 +12,7 @@ export const AppProvider = ({ children }) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [showSuggestion, setShowSuggestion] = useState(false);
   const [isMouseOver, setIsMouseOver] = useState(false);
+  const [toggleNav, setToggleNav] = useState(false);
   const categories = Array.from(
     new Set(dataProduct?.map((item) => item.category))
   );
@@ -40,6 +41,8 @@ export const AppProvider = ({ children }) => {
         isMouseOver,
         setIsMouseOver,
         categories,
+        toggleNav,
+        setToggleNav,
       }}
     >
       {children}

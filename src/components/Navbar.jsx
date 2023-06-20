@@ -4,9 +4,10 @@ import { BiCart } from "react-icons/bi";
 import Search from "./Search";
 import { Logo } from "../components";
 import { CgClose, CgMenuRightAlt } from "react-icons/cg";
+
 const Navbar = () => {
-  const { cartItem, setToggle, toggle } = useContext(AppContext);
-  const [toggleNav, setToggleNav] = useState(false);
+  const { cartItem, setToggle, toggle, toggleNav, setToggleNav } =
+    useContext(AppContext);
 
   return (
     <nav>
@@ -26,7 +27,7 @@ const Navbar = () => {
         </div>
         <div
           onClick={() => setToggleNav(!toggleNav)}
-          className="relative sm:hidden w-8 ml-3 text-4xl"
+          className="sm:hidden w-8 ml-3 text-4xl"
         >
           {toggleNav ? <CgClose /> : <CgMenuRightAlt />}{" "}
           {toggleNav && (

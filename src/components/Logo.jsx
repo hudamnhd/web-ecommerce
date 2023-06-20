@@ -21,7 +21,7 @@ const Logo = () => {
 
 const LogoSocialMedia = () => {
   return (
-    <div className="flex space-x-3 mb-4">
+    <div className="flex xs:w-[67%] justify-center space-x-3 mb-4">
       {[
         [<FaFacebookF key="facebook" />],
         [<FaInstagram key="instagram" />],

@@ -3,11 +3,11 @@ import { product_01 } from "../assets";
 const Hero = () => {
   return (
     <section className="section_hero">
-      <div className="max-w-[700px] space-y-2 xs:space-y-4">
+      <div className="my-auto max-w-[700px] space-y-2 xs:space-y-4">
         <h1 className="flex-1 text-3xl md:text-4xl font-bold">
           Special <span className="text-sky-500">Discount </span>First Shopping
         </h1>
-        <p className=" opacity-70">
+        <p className="opacity-70">
           Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
           cillum sint consectetur cupidatat lorem ipsum dolor sit amet, qui
           minim labore.

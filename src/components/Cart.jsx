@@ -83,7 +83,7 @@ const Cart = () => {
                   </div>
                 ))
               ) : (
-                <p className="text-xl font-medium text-center text-slate-500 my-[60%]">
+                <p className="text-xl w-[300px] font-medium text-center text-slate-500 my-[60%]">
                   Your Cart Empty
                 </p>
               )}

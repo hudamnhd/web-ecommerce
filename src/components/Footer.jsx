@@ -4,11 +4,12 @@ import { AppContext } from "../context";
 
 const Footer = () => {
   const { categories } = useContext(AppContext);
+
   return (
     <footer>
-      <div className=" md:w-1/4 space-y-2 mb-6">
+      <div className="space-y-2 my-3">
         <Logo />
-        <p className="xs:text-[15px] text-slate-600 leading-5">
+        <p className="max-w-[300px] xs:text-[15px] text-slate-600 leading-5">
           We make online shopping easy and affordable, with a wide selection of
           products, competitive prices, and fast shipping.{" "}
         </p>
@@ -16,10 +17,10 @@ const Footer = () => {
           FK Store 2023 Develop By Huda
         </p>
       </div>
-      <div className="flex flex-wrap justify-between gap-10 mb-6">
+      <div className="flex flex-wrap gap-14 my-3">
         {[1, 2, 3].map((index) => (
           <div
-            className="flex flex-col justify-between items-start "
+            className="flex shrink-0 items-start flex-col justify-between space-y-3"
             key={index}
           >
             <h3 className="font-semibold text-slate-700">Product</h3>
@@ -34,9 +35,9 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col md:items-center mb-4">
-        <h3 className="font-semibold text-slate-700 mb-4">
-          Keep Connect With Us
+      <div className="flex flex-col my-4">
+        <h3 className="xs:w-[67%] font-semibold text-slate-700 text-center mb-4">
+          Keep Connect with us
         </h3>
         <LogoSocialMedia />
         <form className="box_cta">
