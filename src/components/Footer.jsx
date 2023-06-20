@@ -6,7 +6,7 @@ const Footer = () => {
   const { categories } = useContext(AppContext);
   return (
     <footer>
-      <div className="xs:w-1/4 space-y-2">
+      <div className=" md:w-1/4 space-y-2 mb-6">
         <Logo />
         <p className="xs:text-[15px] text-slate-600 leading-5">
           We make online shopping easy and affordable, with a wide selection of
@@ -16,10 +16,10 @@ const Footer = () => {
           FK Store 2023 Develop By Huda
         </p>
       </div>
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-wrap justify-between gap-10 mb-6">
         {[1, 2, 3].map((index) => (
           <div
-            className="flex flex-col justify-between items-start mb-4 xs:mb-0 "
+            className="flex flex-col justify-between items-start "
             key={index}
           >
             <h3 className="font-semibold text-slate-700">Product</h3>
