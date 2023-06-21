@@ -29,7 +29,7 @@ const Cart = () => {
                 className="close_btn"
               />
             </div>
-            <div className="p-4 h-full overflow-auto">
+            <div className="p-4 h-full w-[375px] overflow-auto">
               {cartItem.length >= 1 ? (
                 cartItem.map((item) => (
                   <div key={item.id} className="group product_box">
@@ -37,14 +37,14 @@ const Cart = () => {
                       <img src={item.image} alt={item.title} />
                     </div>
                     <div className="flex flex-col justify-between w-[80%]">
-                      <p className="font-medium text-lg">
+                      <p className="text-lg">
                         {item.title.split(" ").slice(0, 3).join(" ")}
                       </p>
-                      <p className="text-slate-500 uppercase text-xs">
+                      <p className="text-slate-500 font-medium uppercase text-xs">
                         {item.category}
                       </p>
                       <div className="flex justify-between items-center mt-1">
-                        <p className="font-semibold ">
+                        <p className="font-medium">
                           Rp {item.priceIDR.toLocaleString("id-ID")}
                         </p>
                         <div className="flex items-center">
