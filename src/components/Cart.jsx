@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../context";
 import { CgClose, CgMathPlus, CgMathMinus, CgTrash } from "react-icons/cg";
 import {
@@ -10,6 +10,14 @@ import {
 
 const Cart = () => {
   const { toggle, setToggle, cartItem, setCartItem } = useContext(AppContext);
+
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [toggle]);
 
   return (
     <div>

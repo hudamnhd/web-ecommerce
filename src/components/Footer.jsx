@@ -35,8 +35,8 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col my-4">
-        <h3 className="xs:w-[67%] font-semibold text-slate-700 text-center mb-4">
+      <div className="flex flex-col my-4 max-w-[250px] lg:w-1/5">
+        <h3 className="font-semibold text-slate-700 text-center mb-4">
           Keep Connect with us
         </h3>
         <LogoSocialMedia />

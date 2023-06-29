@@ -263,7 +263,7 @@ footer {
 }
 
 .box_cta {
-  @apply xs:w-[67%] space-y-1;
+  @apply space-y-1;
 }
 
 .box_cta input {

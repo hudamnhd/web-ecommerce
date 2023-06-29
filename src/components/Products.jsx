@@ -21,7 +21,7 @@ const Products = () => {
   } = useContext(AppContext);
 
   useFilterData(dataProduct, selectedCategory, setDataFiltered, setLoading);
-
+  console.log(selectedItem);
   useEffect(() => {
     fetchData(setDataProduct);
     // eslint-disable-next-line
@@ -72,14 +72,12 @@ const Products = () => {
         </section>
       )}
 
-      {selectedItem && (
-        <Modal
-          selectedItem={selectedItem}
-          setSelectedItem={setSelectedItem}
-          cartItem={cartItem}
-          setCartItem={setCartItem}
-        />
-      )}
+      <Modal
+        selectedItem={selectedItem}
+        setSelectedItem={setSelectedItem}
+        cartItem={cartItem}
+        setCartItem={setCartItem}
+      />
     </>
   );
 };
