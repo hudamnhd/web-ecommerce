@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import {
   Navbar,
   Cart,
@@ -10,6 +11,7 @@ import {
 const Home = () => {
   return (
     <div className="main_container">
+      <Toaster />
       <Navbar />
       <Cart />
       <Hero />

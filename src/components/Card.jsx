@@ -11,6 +11,7 @@ const ProductCard = ({
 }) => {
   return (
     <div key={item.id} className={`group product_card ${className}`}>
+      <div></div>
       <div className="rounded-xl">
         <div className="div_image_card">
           <img src={item.image} alt={item.title} className="image_card" />
@@ -30,22 +31,51 @@ const ProductCard = ({
           </div>
         </div>
       </div>
-      <div className="rounded-xl px-2 pb-1">
-        <p className="card_text_price">
-          Rp {item.priceIDR.toLocaleString("id-ID")}
-        </p>
+      <div className="rounded-xl px-2 pb-2">
+        <div className="flex  items-center text-xs mb-1">
+          {[...Array(5)].map((_, i) => (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className=" text-[#ffcd4e] font-bold sm:text-[18px]"
+              width="16"
+              height="16"
+              fill={i + 1 <= item.rating.rate ? "currentColor" : "#bbb"}
+              viewBox="0 0 16 16"
+              key={i}
+            >
+              <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+            </svg>
+          ))}
+          <p className="ml-1 mt-1  text-gray-400  font-medium">
+            ({item.rating.count})
+          </p>
+        </div>
+
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <FaStar className="card_icon_star" />
-            <p className="card_text_rating">
-              {item.rating.rate} <span className="border mr-1" /> Sold{" "}
-              {item.rating.count}
+            <p className="card_text_price">
+              Rp {item.priceIDR.toLocaleString("id-ID")}
             </p>
           </div>
-          <BiCartAdd
+          <button
             onClick={() => handleAddCart(cartItem, setCartItem, item)}
-            className="card_icon_cart"
-          />
+            className="border-2 hover:bg-sky-600 hover:text-white text-sky-600 duration-300 rounded-md p-0.5 "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6 "
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </button>
         </div>
       </div>
     </div>

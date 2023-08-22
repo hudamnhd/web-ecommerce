@@ -1,5 +1,9 @@
+import { toast } from "react-hot-toast";
+
 export const handleAddCart = (cartItem, setCartItem, item) => {
   const existingItem = cartItem.find((itemCard) => itemCard.id === item.id);
+  toast.success(`${item.title.split(" ").slice(0, 3)} Added Cart`);
+  console.log(item);
   if (existingItem) {
     const updatedItems = cartItem.map((itemCard) =>
       itemCard.id === item.id

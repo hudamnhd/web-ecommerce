@@ -53,9 +53,8 @@ const AutocompleteSearchBox = () => {
   }, [setShowSuggestion]);
 
   return (
-    <div className="hidden xs:block w-full relative" ref={inputSuggestion}>
+    <div className="hidden xs:block w-full  relative" ref={inputSuggestion}>
       <form className="search_box">
-        <CgSearch className="icon_search" />
         <input
           autoComplete="off"
           type="text"
@@ -64,6 +63,7 @@ const AutocompleteSearchBox = () => {
           value={query}
           onChange={handleInputChange}
         />
+        <CgSearch className="icon_search" />
         {query.length > 1 && (
           <CgClose
             role="button"
