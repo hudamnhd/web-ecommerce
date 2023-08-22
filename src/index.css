@@ -94,7 +94,7 @@ nav {
 }
 
 .categories_text {
-  @apply text-sm font-medium  mb-1 hover:text-sky-500 capitalize duration-300;
+  @apply text-[15px] font-medium  mb-1 hover:text-sky-500 capitalize duration-300;
 }
 
 .product_notfound {
