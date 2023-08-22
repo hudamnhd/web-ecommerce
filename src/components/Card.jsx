@@ -10,8 +10,10 @@ const ProductCard = ({
   className,
 }) => {
   return (
-    <div key={item.id} className={`group product_card ${className}`}>
-      <div></div>
+    <div key={item.id} className={`group relative product_card ${className}`}>
+      <div className="absolute z-10 top-2 left-2 w-fit bg-sky-600 text-white font-semibold text-xs rounded-full px-3 py-1">
+        20% Off
+      </div>
       <div className="rounded-xl">
         <div className="div_image_card">
           <img src={item.image} alt={item.title} className="image_card" />
