@@ -30,7 +30,7 @@ const Products = () => {
   return (
     <>
       {dataFiltered && (
-        <div className="inline md:hidden flex flex-wrap items-center justify-center  gap-x-3 text-sm  mx-5 mb-2">
+        <div className="inline md:hidden flex flex-wrap items-center justify-center  gap-x-5   mx-5 mb-2">
           <button
             onClick={() => setSelectedCategory(null)}
             className={`${

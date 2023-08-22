@@ -23,7 +23,9 @@ const Modal = ({ selectedItem, setSelectedItem, cartItem, setCartItem }) => {
             </div>
             <div className="modal_product_detail">
               <p className="product_category">{selectedItem.category}</p>
-              <p className="product_title">{selectedItem.title}</p>
+              <p className="product_title">
+                {selectedItem.title.split(" ").slice(0, 15).join(" ")}...
+              </p>
               <div className="flex space-x-1 items-center mb-2">
                 <div className="flex  items-center text-sm mb-1">
                   {[...Array(5)].map((_, i) => (

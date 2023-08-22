@@ -21,12 +21,12 @@ body {
 }
 
 nav {
-  @apply fixed  px-5 sm:px-8 w-full xl:max-w-[1280px] top-0 z-20 backdrop-blur-xl bg-white/80  border-b;
+  @apply fixed  px-5 sm:px-8 w-full xl:max-w-[1280px] top-0 z-20 backdrop-blur-xl bg-white/90  border-b;
 }
 
 .nav_mobile {
-  @apply backdrop-blur-md bg-white  z-30 absolute flex flex-col px-5 self-end py-2 top-14   left-1 right-1 shadow-md shadow-gray-500 rounded-sm;
-  animation: slide-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  @apply flex flex-col px-2  py-2 border-y mt-2 sm:hidden;
+  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .nav_links {
@@ -192,7 +192,7 @@ nav {
 }
 
 .modal_container {
-  @apply fixed inset-0 flex items-center justify-center z-10;
+  @apply fixed inset-0 flex items-center justify-center z-40;
 }
 
 .modal_block {
@@ -215,7 +215,7 @@ nav {
 }
 
 .modal_product_img {
-  @apply bg-red-100 w-full bg-white xs:block bg-white p-10 shadow-md flex items-center sm:rounded-l-lg;
+  @apply bg-red-100 w-full bg-white xs:block bg-white p-10 shadow-md flex items-center rounded-t-lg sm:rounded-t-none sm:rounded-l-lg;
 }
 
 .modal_product_img img {
@@ -223,7 +223,7 @@ nav {
 }
 
 .modal_product_detail {
-  @apply p-8 xs:p-10 my-auto sm:col-span-2 sm:rounded-r-lg bg-sky-50;
+  @apply p-8 xs:p-10 my-auto sm:col-span-2  rounded-b-lg sm:rounded-b-none  sm:rounded-r-lg bg-sky-50;
 }
 
 .modal_product_detail .product_category {

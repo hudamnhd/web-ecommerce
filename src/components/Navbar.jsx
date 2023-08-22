@@ -47,25 +47,6 @@ const Navbar = () => {
             )}
           </button>
 
-          {toggleNav && (
-            <div className="nav_mobile">
-              {[
-                ["Products", "#products"],
-                ["Promo", "#"],
-                ["About", "#"],
-                ["Help", "#"],
-              ].map(([title, url]) => (
-                <a
-                  key={title}
-                  href={url}
-                  className="text-lg hover:text-sky-500"
-                >
-                  {title}
-                </a>
-              ))}
-            </div>
-          )}
-
           <div className="flex items-center gap-1">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -153,6 +134,25 @@ const Navbar = () => {
         <div className="relative md:hidden mt-1.5">
           <Search />
         </div>
+
+        {toggleNav && (
+          <div className="nav_mobile">
+            {[
+              ["Products", "#products"],
+              ["Promo", "#"],
+              ["About", "#"],
+              ["Help", "#"],
+            ].map(([title, url]) => (
+              <a
+                key={title}
+                href={url}
+                className="text-gray-800   hover:text-sky-600 mb-1"
+              >
+                {title}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </nav>
   );

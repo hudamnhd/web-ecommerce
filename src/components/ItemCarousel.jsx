@@ -32,11 +32,7 @@ const ItemCarousel = () => {
   };
 
   return (
-    <section
-      className="relative px-2 xs:px-8"
-      onMouseEnter={() => setIsMouseOver(true)}
-      onMouseLeave={() => setIsMouseOver(false)}
-    >
+    <>
       {dataFiltered && (
         <div className="categories_text_carousel">
           {categories.map((category) => (
@@ -46,33 +42,40 @@ const ItemCarousel = () => {
           ))}
         </div>
       )}
-      <Carousel
-        infinite
-        arrows={false}
-        autoPlay={true}
-        autoPlaySpeed={3000}
-        responsive={responsive}
-        customButtonGroup={<CustomButtonGroupAsArrows />}
-        renderButtonGroupOutside={true}
+
+      <section
+        className="relative px-2 xs:px-8"
+        onMouseEnter={() => setIsMouseOver(true)}
+        onMouseLeave={() => setIsMouseOver(false)}
       >
-        {dataFiltered ? (
-          dataProduct?.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                item={item}
-                setSelectedItem={setSelectedItem}
-                cartItem={cartItem}
-                setCartItem={setCartItem}
-                className="h-[340px] m-2"
-              />
-            );
-          })
-        ) : (
-          <div />
-        )}
-      </Carousel>
-    </section>
+        <Carousel
+          infinite
+          arrows={false}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          responsive={responsive}
+          customButtonGroup={<CustomButtonGroupAsArrows />}
+          renderButtonGroupOutside={true}
+        >
+          {dataFiltered ? (
+            dataProduct?.map((item) => {
+              return (
+                <Card
+                  key={item.id}
+                  item={item}
+                  setSelectedItem={setSelectedItem}
+                  cartItem={cartItem}
+                  setCartItem={setCartItem}
+                  className="h-[340px] m-2"
+                />
+              );
+            })
+          ) : (
+            <div />
+          )}
+        </Carousel>
+      </section>
+    </>
   );
 };
 
