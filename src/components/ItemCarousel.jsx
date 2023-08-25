@@ -33,16 +33,9 @@ const ItemCarousel = () => {
 
   return (
     <>
-      {dataFiltered && (
-        <div className="categories_text_carousel">
-          {categories.map((category) => (
-            <p key={category} className="font-medium capitalize">
-              Best {category}
-            </p>
-          ))}
-        </div>
-      )}
-
+      <h2 className="text-2xl font-bold tracking-tight text-gray-700 px-3 xs:px-10 mt-8 mb-1">
+        Customers also purchased
+      </h2>
       <section
         className="relative px-2 xs:px-8"
         onMouseEnter={() => setIsMouseOver(true)}

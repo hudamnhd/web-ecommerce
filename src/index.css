@@ -258,12 +258,16 @@ nav {
   @apply absolute top-3 right-3 text-2xl opacity-50 hover:opacity-100;
 }
 
+footerx {
+  @apply flex flex-wrap flex-col-reverse sm:flex-row justify-between p-10 mt-10;
+}
+
 footer {
-  @apply flex flex-wrap flex-col-reverse sm:flex-row justify-between p-10 mt-10 shadow-inner bg-gradient-to-r from-sky-100 from-10% via-sky-50 via-30% to-sky-200/50 to-90%;
+  @apply px-5 sm:px-10 py-6 mt-10 bg-sky-50/30;
 }
 
 .box_cta {
-  @apply space-y-1;
+  @apply flex;
 }
 
 .box_cta input {

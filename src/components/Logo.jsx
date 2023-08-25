@@ -30,7 +30,7 @@ const Logo = () => {
 
 const LogoSocialMedia = () => {
   return (
-    <div className="flex justify-center space-x-3 mb-4">
+    <div className="flex gap-x-3">
       {[
         [<FaFacebookF key="facebook" />],
         [<FaInstagram key="instagram" />],
@@ -38,10 +38,7 @@ const LogoSocialMedia = () => {
         [<FaYoutube key="youtube" />],
         [<FaPinterest key="pinterest" />],
       ].map((icon, index) => (
-        <div
-          key={index}
-          className="text-xl text-white p-[6px] border-2 border-sky-500 bg-sky-500 hover:bg-sky-600 rounded-md"
-        >
+        <div key={index} className="text-xl text-slate-500  p-[6px]">
           {icon}
         </div>
       ))}
