@@ -24,7 +24,9 @@ const Footer = () => {
               className="flex shrink-0 items-start flex-col justify-between gap-y-4"
               key={index}
             >
-              <h3 className="font-semibold text-slate-700 text-lg">Product</h3>
+              <h3 className="font-semibold text-slate-700 text-base">
+                Product
+              </h3>
               {categories.map((category) => (
                 <button
                   key={category}
@@ -41,7 +43,7 @@ const Footer = () => {
       <div className="border-t border-gray-300 w-full" />
       <div className="flex flex-col md:flex-row md:items-center gap-y-6 justify-between my-6">
         <div>
-          <h3 className="font-medium mb-2 text-slate-700">
+          <h3 className="font-medium mb-2 text-slate-700 text-base">
             Subscribe to our newsletter
           </h3>
           <p className="text-gray-500">
@@ -56,7 +58,7 @@ const Footer = () => {
             autoComplete="off"
             placeholder="Your email addres"
           />
-          <button className="text-[15px]  py-1.5 px-4 text-white bg-sky-500 font-medium hover:bg-sky-600 rounded-md duration-300">
+          <button className="py-1.5 px-4 text-white bg-sky-500 font-medium hover:bg-sky-600 rounded-md duration-300">
             Subcribe
           </button>
         </form>
@@ -65,7 +67,7 @@ const Footer = () => {
       <div className="border-t border-gray-300 w-full" />
       <div className="flex flex-col-reverse md:flex-row gap-y-5 md:items-center md:justify-between mt-4">
         <p className="text-sm text-gray-500">
-          © 2023 FKStore. All rights reserved.
+          © 2023 FK Store. All rights reserved.
         </p>
         <LogoSocialMedia />
       </div>

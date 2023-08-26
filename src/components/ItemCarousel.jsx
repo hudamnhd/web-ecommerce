@@ -33,7 +33,7 @@ const ItemCarousel = () => {
 
   return (
     <>
-      <h2 className="text-2xl font-bold tracking-tight text-gray-700 px-3 xs:px-10 mt-8 mb-1">
+      <h2 className="text-2xl font-bold tracking-tight text-gray-700 px-3 xs:px-10 mt-8 mb-2">
         Customers also purchased
       </h2>
       <section

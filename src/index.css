@@ -200,7 +200,7 @@ nav {
 }
 
 .modal_product {
-  @apply mx-2 z-10 relative grid sm:grid-cols-3  rounded-lg bg-white;
+  @apply mx-2 z-10 relative grid sm:grid-cols-3 max-w-4xl  rounded-lg bg-white;
   animation: slide-down 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
@@ -223,7 +223,7 @@ nav {
 }
 
 .modal_product_detail {
-  @apply p-8 xs:p-10 my-auto sm:col-span-2  rounded-b-lg sm:rounded-b-none  sm:rounded-r-lg bg-sky-50;
+  @apply p-8 xs:p-10 my-auto sm:col-span-2   rounded-b-lg sm:rounded-b-none  sm:rounded-r-lg bg-sky-50;
 }
 
 .modal_product_detail .product_category {
@@ -258,12 +258,8 @@ nav {
   @apply absolute top-3 right-3 text-2xl opacity-50 hover:opacity-100;
 }
 
-footerx {
-  @apply flex flex-wrap flex-col-reverse sm:flex-row justify-between p-10 mt-10;
-}
-
 footer {
-  @apply px-5 sm:px-10 py-6 mt-10 bg-sky-50/30;
+  @apply text-sm px-5 sm:px-10 py-6 mt-10 bg-sky-50/30;
 }
 
 .box_cta {

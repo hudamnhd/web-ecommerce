@@ -23,7 +23,7 @@ const ItemCarousel = () => {
 
   return (
     <section
-      className="relative sm:px-8"
+      className=" sm:px-8"
       onMouseEnter={() => setIsMouseOver(true)}
       onMouseLeave={() => setIsMouseOver(false)}
     >
@@ -38,9 +38,11 @@ const ItemCarousel = () => {
         {dataFiltered ? (
           dataProduct?.map((item) => {
             return (
-              <card className="mb-5 mt-10 sm:mt-16 md:mt-8 grid sm:grid-cols-6  sm:rounded-md border-y sm:border sm:border-slate-300 shadow-sm relative sm:mx-2">
-                <div className="sm:col-span-4 sm:bg-gradient-to-r from-sky-300 from-20% via-sky-300/90 via-50%  pr-4 rounded-b-md sm:rounded-b-none sm:rounded-l-md">
-                  <h2 className="font-bold text-lg  sm:text-2xl md:text-3xl ml-6 sm:ml-10 mt-4 sm:mt-8">
+              <card className="mb-5 mt-10 sm:mt-16 md:mt-8 grid sm:grid-cols-6  sm:rounded-md border-y sm:border sm:border-slate-200 shadow-sm  sm:mx-2">
+                <div className=" sm:col-span-4  pr-4 rounded-b-md sm:rounded-b-none sm:rounded-l-md ">
+                  <div />
+
+                  <h2 className="font-bold text-lg  text-gray-800 sm:text-2xl md:text-3xl ml-6 sm:ml-10 mt-4 sm:mt-8">
                     {item.title.slice(0, 28)}...
                   </h2>
 
@@ -50,7 +52,7 @@ const ItemCarousel = () => {
                     dolor sit amet, qui minim labore.{" "}
                   </p>
 
-                  <button className="rounded-md  text-sky-500 sm:text-sky-950  py-1.5  font-semibold ml-6 sm:ml-10 mt-2 sm:mt-5 mb-4 sm:mb-8 group ">
+                  <button className="rounded-md  text-white py-1.5 bg-sky-500 rounded-md px-4 flex items-center text-[15px] py-1.5   font-semibold ml-6 sm:ml-10 mt-2 sm:mt-5 mb-4 sm:mb-8 group ">
                     Add to Cart
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -72,9 +74,9 @@ const ItemCarousel = () => {
                 <div className="relative order-first sm:order-last sm:col-span-2 p-4 flex justify-center items-center rounded-md">
                   <img
                     src={item.image}
-                    className="bg-red-100 h-[160px] sm:h-[180px] md:h-[210px] right-0"
+                    className="bg-red-100 h-[160px] sm:h-[180px] md:h-[210px] "
                   />
-                  <div className="absolute z-10 top-2 left-2 w-fit bg-sky-600 text-white font-semibold text-sm rounded-full px-3 py-1">
+                  <div className="sm:block hidden absolute z-10 top-2 left-2 w-fit bg-sky-500 text-white font-semibold text-sm rounded-full px-3 py-1">
                     20% Off
                   </div>
                 </div>
