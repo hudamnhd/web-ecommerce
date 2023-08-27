@@ -1,5 +1,3 @@
-import { BiCartAdd } from "react-icons/bi";
-import { FaStar } from "react-icons/fa";
 import { handleAddCart } from "../utils/handleCart";
 
 const ProductCard = ({

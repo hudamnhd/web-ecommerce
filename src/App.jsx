@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home, Error } from "./pages";
 import { AppProvider } from "./context";
+
 const App = () => {
   return (
     <AppProvider>

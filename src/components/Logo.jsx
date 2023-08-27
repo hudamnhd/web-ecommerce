@@ -38,7 +38,10 @@ const LogoSocialMedia = () => {
         [<FaYoutube key="youtube" />],
         [<FaPinterest key="pinterest" />],
       ].map((icon, index) => (
-        <div key={index} className="text-xl text-slate-500  p-[6px]">
+        <div
+          key={index}
+          className="text-xl text-slate-500 cursor-pointer hover:text-slate-900 p-[6px] duration-300"
+        >
           {icon}
         </div>
       ))}

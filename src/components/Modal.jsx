@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { FaStar } from "react-icons/fa";
 import { CgClose } from "react-icons/cg";
 import { handleAddCart } from "../utils/handleCart";
 

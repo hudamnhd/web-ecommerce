@@ -10,7 +10,7 @@ import {
 
 const Home = () => {
   return (
-    <div className="main_container">
+    <div className="main_container relative">
       <Toaster />
       <Navbar />
       <Cart />

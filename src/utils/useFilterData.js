@@ -17,6 +17,6 @@ export const useFilterData = (
     setTimeout(() => {
       setDataFiltered(filterData);
       setLoading(false);
-    }, 200);
+    }, 500);
   }, [dataProduct, selectedCategory, setDataFiltered, setLoading]);
 };
