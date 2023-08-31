@@ -58,7 +58,10 @@ const Modal = ({ selectedItem, setSelectedItem, cartItem, setCartItem }) => {
               </p>
               <div className="mb-6">
                 <h4 className="label_desc">Product Detail</h4>
-                <p className="product_desc">{selectedItem.description}</p>
+                <p className="product_desc">
+                  {selectedItem.description.split(" ").slice(0, 35).join(" ")}
+                  ...
+                </p>
               </div>
               <button
                 className="product_btn_add"

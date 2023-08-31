@@ -56,13 +56,13 @@ const AutocompleteSearchBox = () => {
     <div className="w-full relative" ref={inputSuggestion}>
       <input
         type="search"
-        className="w-full pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-200 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
+        className="w-full pl-10 pr-2 h-10 py-1 rounded-lg border border-gray-300 focus:border-gray-300 focus:outline-none focus:shadow-inner leading-none"
         placeholder="Search"
         value={query}
         onChange={handleInputChange}
       />
       <svg
-        className="h-6 w-6 text-gray-300 ml-2 mt-2 stroke-current absolute top-0 left-0"
+        className="h-6 w-6 text-gray-400 ml-2 mt-2 stroke-current absolute top-0 left-0"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"

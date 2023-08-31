@@ -9,9 +9,10 @@ const ProductCard = ({
 }) => {
   return (
     <div key={item.id} className={`group relative product_card ${className}`}>
-      <div className="absolute z-10 top-2 left-2 w-fit bg-sky-500 text-white font-semibold text-xs rounded-full px-3 py-1">
+      <div className="absolute z-10 top-2 left-2 w-fit bg-blue-600 text-white font-semibold text-xs rounded-full px-3 py-1">
         20% Off
       </div>
+
       <div className="rounded-xl">
         <div className="div_image_card">
           <img src={item.image} alt={item.title} className="image_card" />
@@ -39,7 +40,7 @@ const ProductCard = ({
               className=" text-[#ffcd4e] font-bold sm:text-[18px]"
               width="16"
               height="16"
-              fill={i + 1 <= item.rating.rate ? "currentColor" : "#bbb"}
+              fill={i + 1 <= item.rating.rate ? "currentColor" : "#ccc"}
               viewBox="0 0 16 16"
               key={i}
             >
@@ -59,13 +60,13 @@ const ProductCard = ({
           </div>
           <button
             onClick={() => handleAddCart(cartItem, setCartItem, item)}
-            className="border-2 hover:bg-sky-600 hover:text-white text-sky-600 duration-300 rounded-md p-0.5 "
+            className="border-2 border-gray-300 hover:border-white hover:bg-blue-600 hover:text-white text-blue-600 duration-300 rounded-md p-0.5 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={2}
+              strokeWidth={2.5}
               stroke="currentColor"
               className="w-6 h-6 "
             >

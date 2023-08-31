@@ -62,13 +62,11 @@ const Products = () => {
   return (
     <>
       <div className="flex flex-wrap gap-y-2 justify-between items-center  px-3 xs:px-10 mt-5 mb-4">
-        <h2 className="text-2xl font-bold tracking-tight text-gray-700">
-          New Arrivals
-        </h2>
+        <h2 className="text-2xl font-bold tracking-tight">New Arrivals</h2>
         <Listbox value={selectedCategory} onChange={setSelectedCategory}>
           {({ open }) => (
             <div className="relative  min-w-[170px] max-w-[300px]">
-              <Listbox.Button className="w-full flex justify-between cursor-pointer items-center gap-5 border-b pb-1 mt-1 sm:mt-0 border-gray-400  text-gray-900 transition hover:border-gray-600">
+              <Listbox.Button className="w-full flex justify-between cursor-pointer items-center gap-5 border-b pb-1 mt-1 sm:mt-0 border-gray-400 transition hover:border-gray-600">
                 {}
                 <span className="text-sm font-medium capitalize">
                   {selectedCategory ? selectedCategory : "All Category"}
@@ -91,13 +89,15 @@ const Products = () => {
                   </svg>
                 </span>
               </Listbox.Button>
-              <Listbox.Options className="absolute  z-30 mt-2 max-h-56 w-full overflow-auto rounded-sm  bg-white py-1 text-base shadow-lg ring-1 ring-gray-300 focus:outline-none sm:text-sm">
+              <Listbox.Options className="absolute  z-30 mt-2 max-h-56 w-full overflow-auto rounded-sm text-base shadow-lg ring-1 ring-gray-300 focus:outline-none sm:text-sm">
                 <Listbox.Option value={null}>
                   {({ active }) => (
                     <li
                       className={`${
-                        active ? "bg-sky-500 text-white" : "bg-white text-black"
-                      }  pl-3 p-1.5`}
+                        active
+                          ? "bg-blue-500 text-white"
+                          : " bg-white text-black"
+                      }  pl-3 p-1.5 capitalize`}
                     >
                       All Category{" "}
                     </li>
@@ -112,8 +112,8 @@ const Products = () => {
                       <li
                         className={`${
                           active
-                            ? "bg-sky-500 text-white"
-                            : "bg-white text-black"
+                            ? "bg-blue-500 text-white"
+                            : " text-black bg-white"
                         }  pl-3 p-1.5 capitalize`}
                       >
                         {category}

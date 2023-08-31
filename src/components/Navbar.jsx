@@ -50,7 +50,7 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-[22px] h-[22px] mb-1 text-slate-700 "
+              className="w-[22px] h-[22px] mb-1"
             >
               <path
                 fillRule="evenodd"
@@ -58,9 +58,9 @@ const Navbar = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <h1 className="uppercase text-slate-700  font-black text-[25px]">
+            <h1 className="uppercase text-black font-black text-[25px]">
               Fk
-              <span className="text-sky-500 font-extrabold">Store</span>
+              <span className="text-blue-500 font-extrabold">Store</span>
             </h1>
           </div>
 
@@ -68,8 +68,8 @@ const Navbar = () => {
             <button
               onClick={() => setSelectedCategory(null)}
               className={`${
-                selectedCategory === null ? "text-sky-500" : null
-              } categories_text  text-gray-500`}
+                selectedCategory === null ? "text-blue-600" : "text-gray-500"
+              } categories_text  `}
             >
               All Category
             </button>
@@ -80,8 +80,10 @@ const Navbar = () => {
                     key={category}
                     onClick={() => setSelectedCategory(category)}
                     className={`${
-                      selectedCategory === category ? "text-sky-500" : null
-                    } categories_text text-gray-500`}
+                      selectedCategory === category
+                        ? "text-blue-600 "
+                        : "text-gray-500"
+                    } categories_text`}
                   >
                     {category}
                   </button>
@@ -98,10 +100,10 @@ const Navbar = () => {
             </div>
             <button
               onClick={() => setToggle(!toggle)}
-              className="relative flex h-10 items-center px-2 rounded-lg bg-white border border-gray-200 hover:border-gray-300 focus:outline-none hover:shadow-inner"
+              className="relative flex h-10 items-center px-2 rounded-lg  border border-gray-300  focus:outline-none hover:shadow-inner"
             >
               <svg
-                className="h-6 w-6 leading-none text-gray-600 stroke-current"
+                className="h-6 w-6 leading-none text-gray-500 stroke-current"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -114,7 +116,7 @@ const Navbar = () => {
                   d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
                 />
               </svg>
-              <span className="absolute -top-1.5 -right-1.5 px-1 text-gray-500 text-sm font-semibold bg-sky-500 text-white rounded-md flex items-center justify-center">
+              <span className="absolute -top-1.5 -right-1.5 px-1.5 text-gray-500 text-sm font-semibold bg-blue-600 text-white rounded-md flex items-center justify-center">
                 {cartItem.reduce((total, product) => {
                   return product.count + total;
                 }, 0)}
@@ -122,7 +124,7 @@ const Navbar = () => {
             </button>
             <button
               type="button"
-              className="hidden md:block w-10 h-10 p-0.5 rounded-lg bg-gray-100   flex justify-center items-center"
+              className="hidden md:block w-10 h-10 p-0.5 rounded-lg  flex justify-center items-center"
             >
               <img
                 src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
@@ -145,11 +147,7 @@ const Navbar = () => {
               ["About", "#"],
               ["Help", "#"],
             ].map(([title, url]) => (
-              <a
-                key={title}
-                href={url}
-                className="text-gray-800   hover:text-sky-600 mb-1"
-              >
+              <a key={title} href={url} className="hover:text-blue-500 mb-1">
                 {title}
               </a>
             ))}

@@ -122,41 +122,12 @@ export default Cart;
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
-const products = [
-  {
-    id: 1,
-    name: "Throwback Hip Bag",
-    href: "#",
-    color: "Salmon",
-    price: "$90.00",
-    quantity: 1,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg",
-    imageAlt:
-      "Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.",
-  },
-  {
-    id: 2,
-    name: "Medium Stuff Satchel",
-    href: "#",
-    color: "Blue",
-    price: "$32.00",
-    quantity: 1,
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg",
-    imageAlt:
-      "Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.",
-  },
-  // More products...
-];
-
 const NewCart = () => {
-  const [open, setOpen] = useState(true);
   const { toggle, setToggle, cartItem, setCartItem } = useContext(AppContext);
 
   return (
     <Transition.Root show={toggle} as={Fragment}>
-      <Dialog as="div" className="relative z-30" onClose={setOpen}>
+      <Dialog as="div" className="relative z-30" onClose={setToggle}>
         <Transition.Child
           as={Fragment}
           enter="ease-in-out duration-500"
@@ -166,7 +137,7 @@ const NewCart = () => {
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+          <div className="fixed inset-0 bg-gray-900 opacity-70 transition-opacity" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-hidden">
@@ -182,16 +153,16 @@ const NewCart = () => {
                 leaveTo="translate-x-full"
               >
                 <Dialog.Panel className="pointer-events-auto w-screen max-w-md">
-                  <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                  <div className="flex h-full flex-col overflow-y-scroll bg-white  shadow-xl">
                     <div className="flex-1 overflow-y-auto px-4 py-6 sm:px-6">
                       <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-lg font-medium text-gray-900">
+                        <Dialog.Title className="text-lg font-medium">
                           Shopping cart
                         </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
                           <button
                             type="button"
-                            className="relative -m-2 p-2 text-gray-400 hover:text-gray-500 outline-none"
+                            className="relative -m-2 p-2 text-gray-400 hover:text-gray-600 outline-none"
                             onClick={() => setToggle(false)}
                           >
                             <span className="absolute -inset-0.5" />
@@ -218,21 +189,21 @@ const NewCart = () => {
                         <div className="flow-root">
                           <ul
                             role="list"
-                            className="-my-6 divide-y divide-gray-200"
+                            className="-my-6 divide-y divide-gray-500"
                           >
                             {cartItem.length >= 1 ? (
                               cartItem.map((item) => (
                                 <li key={item.id} className="flex py-6">
-                                  <div className="h-24 w-24 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-md border border-gray-200">
+                                  <div className="bg-white h-24 w-24 flex-shrink-0 flex items-center justify-center overflow-hidden rounded-md border border-gray-300">
                                     <img
                                       src={item.image}
-                                      className="h-20 duration-300 "
+                                      className="object-contain h-24 w-24 duration-300 p-1"
                                     />
                                   </div>
 
                                   <div className="ml-4 flex flex-1 flex-col">
                                     <div>
-                                      <div className="flex justify-between text-base font-medium text-gray-900">
+                                      <div className="flex justify-between text-base font-medium ">
                                         <h3>
                                           {item.title
                                             .split(" ")
@@ -240,12 +211,12 @@ const NewCart = () => {
                                             .join(" ")}
                                         </h3>
                                       </div>
-                                      <p className="mt-1 text-sm text-gray-500 capitalize">
+                                      <p className="mt-1 text-sm text-gray-500 capitalize font-medium">
                                         {item.category}
                                       </p>
                                     </div>
                                     <div className="flex gap-x-1 flex-1 items-end justify-between text-sm">
-                                      <p className="text-gray-900 font-medium">
+                                      <p className="font-medium">
                                         Rp{" "}
                                         {item.priceIDR.toLocaleString("id-ID")}{" "}
                                       </p>
@@ -276,7 +247,7 @@ const NewCart = () => {
                                             <CgMathMinus className="hover:scale-150 duration-300" />
                                           </button>
                                           <input
-                                            className="w-8 text-center border-none outline-none"
+                                            className="w-8  text-center border-none outline-none"
                                             type="text"
                                             name="count"
                                             value={item.count}
@@ -302,7 +273,7 @@ const NewCart = () => {
                               ))
                             ) : (
                               <div className="flex items-center h-[66vh]">
-                                <p className="text-lg w-full font-medium text-center text-slate-500">
+                                <p className="text-lg w-full font-medium text-center text-slate-600">
                                   Your Cart Empty
                                 </p>
                               </div>
@@ -312,18 +283,18 @@ const NewCart = () => {
                       </div>
                     </div>
 
-                    <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
-                      <div className="flex justify-between text-base font-medium text-gray-900">
+                    <div className="border-t border-gray-300 px-4 py-6 sm:px-6">
+                      <div className="flex justify-between text-base font-medium ">
                         <p>Subtotal</p>
                         <p>Rp {cartTotal(cartItem).toLocaleString("id-ID")}</p>
                       </div>
-                      <p className="mt-0.5 text-sm text-gray-500">
+                      <p className="mt-0.5 text-sm text-gray-400">
                         Shipping and taxes calculated at checkout.
                       </p>
                       <div className="mt-6">
                         <a
                           href="#"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-sky-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-sky-700"
+                          className="flex items-center justify-center rounded-md border border-transparent bg-blue-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700"
                         >
                           Checkout(
                           {cartItem.reduce((total, product) => {

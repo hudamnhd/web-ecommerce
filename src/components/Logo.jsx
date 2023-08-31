@@ -13,7 +13,7 @@ const Logo = () => {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="w-[22px] h-[22px] mb-1 text-slate-700 "
+        className="w-[22px] h-[22px] mb-1 text-black"
       >
         <path
           fillRule="evenodd"
@@ -21,8 +21,8 @@ const Logo = () => {
           clipRule="evenodd"
         />
       </svg>
-      <h1 className="uppercase text-slate-700 font-black text-[25px]">
-        Fk<span className="text-sky-500 font-extrabold">Store</span>
+      <h1 className="uppercase text-black font-black text-[25px]">
+        Fk<span className="text-blue-500 font-extrabold">Store</span>
       </h1>
     </div>
   );
@@ -40,7 +40,7 @@ const LogoSocialMedia = () => {
       ].map((icon, index) => (
         <div
           key={index}
-          className="text-xl text-slate-500 cursor-pointer hover:text-slate-900 p-[6px] duration-300"
+          className="text-xl text-gray-500 cursor-pointer hover:text-gray-800 p-[6px] duration-300"
         >
           {icon}
         </div>

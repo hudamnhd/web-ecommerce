@@ -16,9 +16,10 @@ const Hero = () => {
     useContext(AppContext);
 
   return (
-    <section className=" sm:px-8">
+    <section className="rounded-md sm:px-8">
       <Carousel
         infinite
+        className="sm:rounded-xl shadow-lg shadow-gray-200 mt-32 md:mt-24 [10px] border border-gray-200"
         arrows={false}
         autoPlay={true}
         autoPlaySpeed={3000}
@@ -27,11 +28,11 @@ const Hero = () => {
         {dataFiltered ? (
           dataProduct?.map((item) => {
             return (
-              <card className="mb-5 mt-10 sm:mt-16 md:mt-8 grid sm:grid-cols-6  sm:rounded-md border-y sm:border sm:border-slate-200 shadow-sm  sm:mx-2">
+              <card className="grid sm:grid-cols-6 sm:rounded-md shadow-blue-600">
                 <div className=" sm:col-span-4  pr-4 rounded-b-md sm:rounded-b-none sm:rounded-l-md ">
                   <div />
 
-                  <h2 className="font-bold text-lg  text-gray-800 sm:text-2xl md:text-3xl ml-6 sm:ml-10 mt-4 sm:mt-8">
+                  <h2 className="font-bold text-lg   sm:text-2xl md:text-3xl ml-6 sm:ml-10 mt-4 sm:mt-8">
                     {item.title.slice(0, 28)}...
                   </h2>
 
@@ -43,7 +44,7 @@ const Hero = () => {
 
                   <button
                     onClick={() => handleAddCart(cartItem, setCartItem, item)}
-                    className="rounded-md  text-white py-1.5 bg-sky-500 rounded-md px-4 flex items-center text-[15px] py-1.5   font-semibold ml-6 sm:ml-10 mt-2 sm:mt-5 mb-4 sm:mb-8 group "
+                    className="rounded-md  text-white py-1.5 bg-blue-600 rounded-md px-4 flex items-center text-[15px] py-1.5   font-semibold ml-6 sm:ml-10 mt-2 sm:mt-5 mb-4 sm:mb-8 group "
                   >
                     Add to Cart
                     <svg
@@ -63,13 +64,21 @@ const Hero = () => {
                   </button>
                 </div>
 
-                <div className="relative order-first sm:order-last sm:col-span-2 p-4 flex justify-center items-center rounded-md">
-                  <img
-                    src={item.image}
-                    className="h-[160px] sm:h-[180px] md:h-[210px] "
-                  />
-                  <div className="sm:block hidden absolute z-10 top-2 left-2 w-fit bg-sky-500 text-white font-semibold text-sm rounded-full px-3 py-1">
-                    20% Off
+                <div className="relative order-first sm:order-last sm:col-span-2 flex justify-center items-center rounded-r-md">
+                  <div className="group relative flex justify-center items-center w-full h-full   cursor-pointer flex-col items-start  overflow-hidden rounded-lg  transition-all duration-300">
+                    <div className="absolute right-6 top-0 h-16 w-16">
+                      <div className="absolute left-[-34px] top-[32px] z-10 w-[170px] rotate-45 transform border border-white bg-blue-600 py-1 text-center font-semibold text-white">
+                        20% OFF
+                      </div>
+                    </div>
+                    <img
+                      src={item.image}
+                      className="p-3 transition-all duration-300 group-hover:opacity-90 h-[160px] sm:h-[180px] md:h-[210px] "
+                    />
+                  </div>
+
+                  <div className=" hidden absolute z-10 top-2 left-2 w-fit bg-blue-600 text-white font-semibold text-sm rounded-full px-3 py-1">
+                    20% OFF
                   </div>
                 </div>
               </card>
