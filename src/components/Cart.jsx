@@ -189,7 +189,7 @@ const NewCart = () => {
                         <div className="flow-root">
                           <ul
                             role="list"
-                            className="-my-6 divide-y divide-gray-500"
+                            className="-my-6 divide-y divide-gray-200"
                           >
                             {cartItem.length >= 1 ? (
                               cartItem.map((item) => (

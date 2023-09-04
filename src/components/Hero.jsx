@@ -28,23 +28,21 @@ const Hero = () => {
         {dataFiltered ? (
           dataProduct?.map((item) => {
             return (
-              <card className="grid sm:grid-cols-6 sm:rounded-md shadow-blue-600">
-                <div className=" sm:col-span-4  pr-4 rounded-b-md sm:rounded-b-none sm:rounded-l-md ">
+              <card className="grid sm:grid-cols-6 sm:rounded-md shadow-blue-600 h-full">
+                <div className="sm:col-span-4  pr-4 rounded-b-md sm:rounded-b-none sm:rounded-l-md bg-gradient-to-t sm:bg-gradient-to-r from-blue-100 via-blue-50 to-white">
                   <div />
 
-                  <h2 className="font-bold text-lg   sm:text-2xl md:text-3xl ml-6 sm:ml-10 mt-4 sm:mt-8">
-                    {item.title.slice(0, 28)}...
+                  <h2 className="font-bold  text-lg sm:text-2xl md:text-3xl ml-6 sm:ml-10 mt-4 sm:mt-8">
+                    {item.title.slice(0, 45)}...
                   </h2>
 
-                  <p className=" font ml-6 sm:ml-10 mt-2 sm:mt-5">
-                    Lorem ipsum dolor sit amet, qui minim labore adipisicing
-                    minim sint cillum sint consectetur cupidatat lorem ipsum
-                    dolor sit amet, qui minim labore.{" "}
+                  <p className="font ml-6 sm:ml-10 mt-2 sm:mt-5">
+                    {item.description.substring(0, 150)}...
                   </p>
 
                   <button
                     onClick={() => handleAddCart(cartItem, setCartItem, item)}
-                    className="rounded-md  text-white py-1.5 bg-blue-600 rounded-md px-4 flex items-center text-[15px] py-1.5   font-semibold ml-6 sm:ml-10 mt-2 sm:mt-5 mb-4 sm:mb-8 group "
+                    className="rounded-md  text-white py-1.5 bg-blue-600 rounded-md px-4 flex items-center text-[15px] py-1.5   font-semibold ml-6 sm:ml-10 mt-4 sm:mt-5 mb-4 sm:mb-8 group "
                   >
                     Add to Cart
                     <svg
@@ -64,7 +62,7 @@ const Hero = () => {
                   </button>
                 </div>
 
-                <div className="relative order-first sm:order-last sm:col-span-2 flex justify-center items-center rounded-r-md">
+                <div className="w-full bg-white relative order-first sm:order-last sm:col-span-2 flex justify-center items-center rounded-r-md">
                   <div className="group relative flex justify-center items-center w-full h-full   cursor-pointer flex-col items-start  overflow-hidden rounded-lg  transition-all duration-300">
                     <div className="absolute right-6 top-0 h-16 w-16">
                       <div className="absolute left-[-34px] top-[32px] z-10 w-[170px] rotate-45 transform border border-white bg-blue-600 py-1 text-center font-semibold text-white">

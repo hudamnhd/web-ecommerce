@@ -26,9 +26,7 @@ const ProductCard = ({
           </button>
           <div className="p-2">
             <p className="card_text_category">{item.category}</p>
-            <p className="card_text_title">
-              {item.title.split(" ").slice(0, 3).join(" ")}...
-            </p>
+            <p className="card_text_title">{item.title}</p>
           </div>
         </div>
       </div>
@@ -60,7 +58,7 @@ const ProductCard = ({
           </div>
           <button
             onClick={() => handleAddCart(cartItem, setCartItem, item)}
-            className="border-2 border-gray-300 hover:border-white hover:bg-blue-600 hover:text-white text-blue-600 duration-300 rounded-md p-0.5 "
+            className="border-2 border-gray-200 hover:border-white hover:bg-blue-600 hover:text-white text-blue-600 duration-300 rounded-md p-0.5 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
