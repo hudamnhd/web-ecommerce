@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
         <form className="flex gap-x-1.5 max-w-sm">
           <input
-            className=" py-1.5 px-4 w-full focus:outline-none border-gray-400 border-[1.5px] rounded-md"
+            className=" py-1.5 px-4 w-full focus:outline-none border-gray-300 border-[1.5px] rounded-md"
             type="text"
             name="email"
             autoComplete="off"
